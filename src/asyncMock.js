@@ -5,7 +5,7 @@ const products = [
     precio: 35500,
     imagen: "https://i.pinimg.com/originals/e4/65/99/e46599f46774154fe547ecf334639f4d.jpg" ,
     stock: 10,
-    descripcion: 'VideoJuego Resident Evil 2 version remake 2019'
+    descripcion: 'VideoJuego Resident Evil 2 version remake 2019',
     },
     {
     id: 2,
@@ -40,3 +40,12 @@ export const getProducts = () => {
         }, 500)
     })
 }
+
+export const getProductById = (productId) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.find(prod => prod.id === productId))
+        }, 500)
+    })
+}
+

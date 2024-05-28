@@ -1,4 +1,4 @@
-import '/Item.css'
+import '../Item/Item.css'
 
 const Item = ({id, nombre, precio, imagen, stock}) => {
 
@@ -21,8 +21,10 @@ const Item = ({id, nombre, precio, imagen, stock}) => {
                 </p>
                 </section> 
                 <footer className='ItemFooter'>
-                    <button className='Option'>Ver detalles</button>
+                    <link to={`/item/${id}`} className='Option'>Ver detalles</link>
                 </footer>
         </article>
     )
 }
+
+export default Item;
